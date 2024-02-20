@@ -1,5 +1,5 @@
 // [Template no Kotlin Playground](https://pl.kotl.in/WcteahpyN)
-// link pto Kotlin playground
+// link to Kotlin playground
 
 enum class Level { BASIC, INTERMEDIATE, UPPERINTERMEDIATE, ADVANCED }
 enum class AccessType { STUDENT, EMPLOYEE}
@@ -13,7 +13,6 @@ data class Course(val name: String, var contents: MutableSet<CourseContent>, var
     fun enroll(user: User) {
         //PT-BR: TODO("Utilize o parâmetro $usuario para simular uma matrícula (usar a lista de $inscritos).")
         // TODO("Use the parameter $user to simulate an enrollment (use the list of $subscribers).")
-        // TODOJIL: verif nivel
 
         if (user.level == this.level) {
             subscribers.add(user.name + user.userId + user.userType)
@@ -33,8 +32,8 @@ data class Course(val name: String, var contents: MutableSet<CourseContent>, var
 
         println("Students enroll in this course:")
         println(subscribers)
-        var totalSubs = subscribers.size
-        println("Quantidade de pessoas inscritas: $totalSubs.")
+        val totalSubs = subscribers.size
+        println("Total number of registered people: $totalSubs.")
         println("----- The end -----")
         println()
     }
@@ -56,7 +55,7 @@ fun main() {
     val courseContentTest1 = CourseContent("Git - GitHub", 12, Level.BASIC)
     val courseContentTest2 = CourseContent("Kotlin - Introduction", 13, Level.BASIC)
     val courseContentTest3 = CourseContent("Kotlin - Programming logic", 14, Level.INTERMEDIATE)
-    val courseContentTest4 = CourseContent("Agile - Agile Introdution", 15, Level.BASIC)
+    val courseContentTest4 = CourseContent("Agile - Agile Introduction", 15, Level.BASIC)
     val courseKotlin = Course("Kotlin", mutableSetOf(courseContentTest1,courseContentTest2, courseContentTest3), Level.INTERMEDIATE)
     val courseAgile = Course("Agile", mutableSetOf(courseContentTest4), Level.BASIC)
 
